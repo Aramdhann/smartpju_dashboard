@@ -3,7 +3,7 @@ session_start();
 include '../core/connection.php' // memanggil file connection
 ?>
 
-<h5>Sensor</h5>
+<h5 class="fw-bold" style="font-size: 30px;">Sensor</h5>
 <div class="row">
     <div class="col-lg-3 col-md-6 col-12">
         <div class="card">

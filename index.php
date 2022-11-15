@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- box icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
 
 </head>
 
@@ -23,7 +24,8 @@
         <nav class="nav">
             <div>
                 <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span
-                        class="nav_logo-name">Smart PJU</span> </a>
+                        class="nav_logo-name">Smart
+                        PJU</span> </a>
                 <div class="nav_list">
                     <a href="#sensor" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span
                             class="nav_name">Sensor</span> </a>
@@ -38,10 +40,10 @@
     </div>
     <!--container main start-->
     <div class="dashboard">
-        <div id="sensor">
+        <div id="sensor" class="mb-5">
 
         </div>
-        <div id="location">
+        <div id="location" class="mb-5">
 
         </div>
         <div id="table">
@@ -72,8 +74,12 @@
     <script src="https://kit.fontawesome.com/02477e3f4f.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/table2excel.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
 
-    <!-- reload otomatis -->
+
+    <!--reload otomatis-->
     <script>
     $(document).ready(function() {
         loadSensor();
@@ -93,7 +99,7 @@
 
     function loadTable() {
         $("#table").load("./layout/table.php");
-        setTimeout(loadTable, 100);
+        setTimeout(loadTable, 15000);
     }
 
     function loadPagination() {

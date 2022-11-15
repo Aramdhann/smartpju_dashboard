@@ -1,5 +1,5 @@
-<div class="d-flex justify-content-center">
-    <nav aria-label="Page navigation example" style="margin-bottom: 100px;">
+<!-- <div class="d-flex justify-content-center">
+    <nav aria-label="Page navigation example">
         <ul class="pagination">
             <li class="page-item"><a class="page-link text-reset" href="#">Previous</a></li>
             <li class="page-item"><a class="page-link text-reset" href="#">1</a></li>
@@ -8,4 +8,4 @@
             <li class="page-item"><a class="page-link text-reset" href="#">Next</a></li>
         </ul>
     </nav>
-</div>
+</div> -->
