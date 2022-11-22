@@ -87,11 +87,18 @@
         loadLocation();
         loadTable();
         loadPagination();
+
+        setInterval(function() {
+            $("#lamp").load("./core/val_lamp.php");
+            $("#volt").load("./core/val_volt.php");
+            $("#arus").load("./core/val_amp.php");
+            $("#ldr").load("./core/val_ldr.php");
+        }, 1000);
     });
 
     function loadSensor() {
         $("#sensor").load("./layout/sensor.php");
-        setTimeout(loadSensor, 100);
+        // setTimeout(loadSensor, 100);
     }
 
     function loadLocation() {

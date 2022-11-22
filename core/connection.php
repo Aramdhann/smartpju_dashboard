@@ -16,30 +16,49 @@ if (!$connect) {
     exit();
 }
 
-$status_lampu = "";
-$nilai_tegangan = "";
-$nilai_arus = "";
-$nilai_LDR = "";
+// API
+$api_key_value = "tPmAT5Ab3j7F9";
+$api_key = "";
+
+$val_lamp = "";
+$val_volt = "";
+$val_amp = "";
+$val_ldr = "";
 $latitude = "";
 $longitude = "";
 
-if (
-    isset($_GET['status_lampu']) && $_GET['status_lampu'] != 0 &&
-    isset($_GET['nilai_tegangan']) && $_GET['nilai_tegangan'] != 0 &&
-    isset($_GET['nilai_arus']) && $_GET['nilai_arus'] != 0 &&
-    isset($_GET['nilai_LDR']) && $_GET['nilai_LDR'] != 0 &&
-    isset($_GET['latitude']) && $_GET['latitude'] != 0 &&
-    isset($_GET['longitude']) && $_GET['longitude'] != 0
-) {
-    $status_lampu = $_GET["status_lampu"];
-    $nilai_tegangan = $_GET["nilai_tegangan"];
-    $nilai_arus = $_GET["nilai-arus"];
-    $nilai_LDR = $_GET["nilai_LDR"];
-    $latitude = $_GET["latitude"];
-    $longitude = $_GET["longitude"];
 
-    $query = "INSERT INTO tbl_sensor (val_lamp, val_volt, val_amp, val_ldr, latitude, longitude) VALUES ('$status_lampu', '$nilai_tegangan', '$nilai_arus', '$nilai_LDR', '$latitude', '$longitude')";
 
-    $result = mysqli_query($connect, $querry);
+// POST method
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $api_key = test_input($_POST["api_key"]);
+    if ($api_key == $api_key_value) {
+        $val_lamp = test_input($_POST["val_lamp"]);
+        $val_volt = test_input($_POST["val_volt"]);
+        $val_amp = test_input($_POST["val_amp"]);
+        $val_ldr = test_input($_POST["val_ldr"]);
+        $longitude = test_input($_POST["longitude"]);
+        $latitude = test_input($_POST["latitude"]);
+
+        $sql = "INSERT INTO tbl_sensor (val_lamp, val_volt, val_amp, val_ldr, latitude, longitude) VALUES ('" . $val_lamp . "', '" . $val_volt . "', '" . $val_amp . "', '" . $val_ldr . "', '" . $latitude . "', '" . $longitude . "')";
+
+        if ($connect->query($sql) === TRUE) {
+            echo "new record created successfully";
+        } else {
+            echo "Error: " . $sql . "<br>" . $connect->error;
+        }
+        $connect->close();
+    } else {
+        echo "Wrong API key!";
+    }
+} else {
+    echo "No data posted with HTTP POST";
+}
+
+function test_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
 }
 ?>

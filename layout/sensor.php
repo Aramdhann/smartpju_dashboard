@@ -17,8 +17,8 @@ include '../core/connection.php' // memanggil file connection
                         <i class="fa-regular fa-lightbulb"></i>
                     </div>
                     <div class="float-end nilai-card">
-                        <?php $status_lampu = mysqli_query($connect, "SELECT val_lamp FROM tbl_sensor ORDER BY id DESC LIMIT 1");$data = mysqli_fetch_array($status_lampu);
-                        echo $data['val_lamp']; ?></div>
+                        <span id="lamp"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -34,9 +34,7 @@ include '../core/connection.php' // memanggil file connection
                         class="card-icon rounded-circle border-0 d-flex align-items-center justify-content-center float-start">
                         <i class="fa-solid fa-bolt-lightning"></i>
                     </div>
-                    <div class="float-end nilai-card"><?php $nilai_tegangan = mysqli_query($connect, "SELECT val_volt FROM tbl_sensor ORDER BY id DESC LIMIT 1");
-                    $data = mysqli_fetch_array($nilai_tegangan);
-                    echo $data['val_volt'];?> <span>V</span></div>
+                    <div class="float-end nilai-card"><span id="volt"></span> <span>V</span></div>
                 </div>
             </div>
         </div>
@@ -52,9 +50,7 @@ include '../core/connection.php' // memanggil file connection
                         class="card-icon rounded-circle border-0 d-flex align-items-center justify-content-center float-start">
                         <i class="bx bx-water"></i>
                     </div>
-                    <div class="float-end nilai-card"><?php $nilai_arus = mysqli_query($connect, "SELECT val_amp FROM tbl_sensor ORDER BY id DESC LIMIT 1");
-                    $data = mysqli_fetch_array($nilai_arus);
-                    echo $data['val_amp'];?> <span>A</span></div>
+                    <div class="float-end nilai-card"><span id="arus"></span> <span>A</span></div>
                 </div>
             </div>
         </div>
@@ -70,9 +66,9 @@ include '../core/connection.php' // memanggil file connection
                         class="card-icon rounded-circle border-0 d-flex align-items-center justify-content-center float-start">
                         <i class="fa-solid fa-sun"></i>
                     </div>
-                    <div class="float-end nilai-card"><?php $nilai_LDR = mysqli_query($connect, "SELECT val_LDR FROM tbl_sensor ORDER BY id DESC LIMIT 1");
-                    $data = mysqli_fetch_array($nilai_LDR);
-                    echo $data['val_LDR'];?></div>
+                    <div class="float-end nilai-card">
+                        <span id="ldr"></span>
+                    </div>
                 </div>
             </div>
         </div>
