@@ -1,6 +1,6 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = 'smart_smart';
+$dbuser = 'smart';
 $dbpass = 'pensJOSS123';
 $dbname = 'smar_smart'; // sesuaikan nama database
 // $dbhost = 'localhost';
