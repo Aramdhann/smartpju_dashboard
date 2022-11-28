@@ -25,7 +25,7 @@ require '../core/connection.php' // memanggil file connection
         <tbody id="refresh">
             <?php
             $no = 1; // untuk pengurutan nomor
-            $datas = mysqli_query($connect, "SELECT * FROM tbl_sensor ORDER BY id"); // script untuk menampilkan data
+            $datas = mysqli_query($connect, "SELECT * FROM tbl_sensor ORDER BY id DESC"); // script untuk menampilkan data
             ?>
             <?php while ($row = mysqli_fetch_assoc($datas)) : // melakukan perulangan ?>
             <tr>
