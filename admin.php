@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
     $up = $_POST["up_threshold"];
     $low = $_POST["low_threshold"];
 
-    $sql = "INSERT INTO threshold VALUES ('', '$up', '$low')";
+    $sql = "INSERT INTO threshold VALUES (null, '$up', '$low')";
     mysqli_query($connect, $sql);
 
     if(mysqli_affected_rows($connect) > 0) {
