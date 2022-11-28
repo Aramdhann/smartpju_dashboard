@@ -118,7 +118,7 @@
 
     function loadTable() {
         $("#table").load("./layout/table.php");
-        setTimeout(loadTable, 15000);
+        setTimeout(loadTable, 10000);
     }
 
     function loadPagination() {
