@@ -59,7 +59,7 @@ require '../core/connection.php' // memanggil file connection
         <div class="card">
             <div class="card-body ldr">
                 <div class="card-title">
-                    Nilai LDR
+                    Nilai LUX
                 </div>
                 <div class="d-flex align-items-center justify-content-between">
                     <div

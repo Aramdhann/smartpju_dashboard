@@ -18,7 +18,7 @@ require '../core/connection.php' // memanggil file connection
                 <th scope="col">Daya</th>
                 <th scope="col">Suhu</th>
                 <th scope="col">Nilai Arus</th>
-                <th scope="col">Nilai LDR</th>
+                <th scope="col">Nilai LUX</th>
                 <th scope="col">Waktu</th>
             </tr>
         </thead>
@@ -64,7 +64,7 @@ require '../core/connection.php' // memanggil file connection
                 <th>Daya</th>
                 <th>Suhu</th>
                 <th>Nilai Arus</th>
-                <th>Nilai LDR</th>
+                <th>Nilai LUX</th>
                 <th>Waktu</th>
             </tr>
         </tfoot>
