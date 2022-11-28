@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../core/connection.php' // memanggil file connection
+require '../core/connection.php' // memanggil file connection
 ?>
 
 <h5 class="mt-4 fw-bold" style="font-size: 30px;">Recent Data</h5>
@@ -15,6 +15,8 @@ include '../core/connection.php' // memanggil file connection
                 <th scope="col">No</th>
                 <th scope="col">Status Lampu</th>
                 <th scope="col">Tegangan</th>
+                <th scope="col">Daya</th>
+                <th scope="col">Suhu</th>
                 <th scope="col">Nilai Arus</th>
                 <th scope="col">Nilai LDR</th>
                 <th scope="col">Waktu</th>
@@ -37,6 +39,12 @@ include '../core/connection.php' // memanggil file connection
                     <?php echo $row['val_volt']; ?>
                 </td>
                 <td>
+                    <?php echo $row['val_daya']; ?>
+                </td>
+                <td>
+                    <?php echo $row['val_temp']; ?>
+                </td>
+                <td>
                     <?php echo $row['val_amp']; ?>
                 </td>
                 <td>
@@ -53,6 +61,8 @@ include '../core/connection.php' // memanggil file connection
                 <th>No</th>
                 <th>Status Lampu</th>
                 <th>Tegangan</th>
+                <th>Daya</th>
+                <th>Suhu</th>
                 <th>Nilai Arus</th>
                 <th>Nilai LDR</th>
                 <th>Waktu</th>

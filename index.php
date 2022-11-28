@@ -20,6 +20,7 @@
     <header class="header" id="header">
         <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
         <div class="text-title fw-bold">Monitoring Smart PJU</div>
+        <a href="./login.php" class="btn btn-light" style="border: 1px solid black;">Admin Login</a>
     </header>
     <div class="l-navbar" id="nav-bar">
         <nav class="nav">
@@ -36,6 +37,14 @@
                             class="nav_name">Recent
                             Data</span> </a>
                 </div>
+                <!-- <div class="logout">
+                    <a href="logout.php" class="nav_link">
+                        <i class='bx bx-log-out p-2'
+                            style="background-color: #454469; margin-left: -0.5rem; border-radius: 7px"></i>
+                        <span class="nav_name">Log
+                            Out</span>
+                    </a>
+                </div> -->
             </div>
         </nav>
     </div>
@@ -93,6 +102,8 @@
             $("#volt").load("./core/val_volt.php");
             $("#arus").load("./core/val_amp.php");
             $("#ldr").load("./core/val_ldr.php");
+            $("#daya").load("./core/val_daya.php");
+            $("#temp").load("./core/val_temp.php");
         }, 1000);
     });
 

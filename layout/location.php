@@ -1,8 +1,6 @@
 <h5 class="mt-4 fw-bold" style="font-size: 30px;">Location</h5>
 <?php
-$connect = mysqli_connect("localhost", "smar_smartpju", "pensJOSS123", "smar_smartpju");
-// $connect = mysqli_connect("localhost", "root", "", "smart_pju");
-
+require '../core/conn.php';
 $result = mysqli_query($connect, "SELECT * FROM tbl_sensor");
 if( !$result) {
     echo mysqli_error($connect);

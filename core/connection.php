@@ -1,20 +1,5 @@
 <?php
-$dbhost = 'localhost';
-$dbuser = 'smar_smartpju';
-$dbpass = 'pensJOSS123';
-$dbname = 'smar_smartpju'; // sesuaikan nama database
-// $dbhost = 'localhost';
-// $dbuser = 'root';
-// $dbpass = '';
-// $dbname = 'smart_pju'; // sesuaikan nama database
-
-$connect = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-
-// cek koneksi ketika gagal
-if (!$connect) {
-    echo "Error: " . mysqli_connect_error();
-    exit();
-}
+require 'conn.php';
 
 // API
 $api_key_value = "tPmAT5Ab3j7F9";
@@ -51,8 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         echo "Wrong API key!";
     }
-} else {
-    echo "No data posted with HTTP POST";
 }
 
 function test_input($data) {
