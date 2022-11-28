@@ -57,3 +57,7 @@ function test_input($data) {
     return $data;
 }
 ?>
+
+<?php
+date_default_timezone_set("Asia/Bangkok");
+?>
