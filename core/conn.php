@@ -1,8 +1,8 @@
 <?php
 $dbhost = 'localhost';
-$dbuser = 'smar_smart';
-$dbpass = 'pensJOSS123';
-$dbname = 'smar_smart'; // sesuaikan nama database
+$dbuser = 'smar_smartpju';
+$dbpass = 'Aramdhan28';
+$dbname = 'smar_smartpju'; // sesuaikan nama database
 // $dbhost = 'localhost';
 // $dbuser = 'root';
 // $dbpass = '';
