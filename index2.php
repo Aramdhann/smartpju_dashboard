@@ -20,8 +20,8 @@
 <body id="body-pd" class="body-pd">
     <header class="header body-pd" id="header">
         <div class="header_toggle"> <i class='bx bx-menu bx-x' id="header-toggle"></i> </div>
-        <div class="text-title fw-bold">Monitoring Smart PJU <span class="ms-3 fw-light">[Device 1]</span></div>
-        <a href="./login.php" class="btn btn-light" style="border: 1px solid black;">Admin Login</a>
+        <div class="text-title fw-bold">Monitoring Smart PJU <span class="ms-3 fw-light">[Device 2]</span></div>
+        <a href="./login2.php" class="btn btn-light" style="border: 1px solid black;">Admin 2 Login</a>
     </header>
     <div class="l-navbar show" id="nav-bar">
         <nav class="nav">
@@ -30,9 +30,9 @@
                         class="nav_logo-name">Smart
                         PJU</span> </a>
                 <div class="nav_list">
-                    <a href="#" class="nav_link active"> <i class='bx bx-devices bx-sm'></i> <span
+                    <a href="index.php" class="nav_link"> <i class='bx bx-devices bx-sm'></i> <span
                             class="nav_name">Device 1</span> </a>
-                    <a href="index2.php" class="nav_link"> <i class='bx bx-devices bx-sm'></i></i> <span
+                    <a href="#" class="nav_link active"> <i class='bx bx-devices bx-sm'></i></i> <span
                             class="nav_name">Device 2</span> </a>
                 </div>
             </div>
@@ -89,31 +89,31 @@
         loadPagination();
 
         setInterval(function() {
-            $("#lamp").load("./core/val_lamp.php");
-            $("#volt").load("./core/val_volt.php");
-            $("#arus").load("./core/val_amp.php");
-            $("#ldr").load("./core/val_ldr.php");
-            $("#daya").load("./core/val_daya.php");
-            $("#temp").load("./core/val_temp.php");
+            $("#lamp").load("./core2/val_lamp.php");
+            $("#volt").load("./core2/val_volt.php");
+            $("#arus").load("./core2/val_amp.php");
+            $("#ldr").load("./core2/val_ldr.php");
+            $("#daya").load("./core2/val_daya.php");
+            $("#temp").load("./core2/val_temp.php");
         }, 1000);
     });
 
     function loadSensor() {
-        $("#sensor").load("./layout/sensor.php");
+        $("#sensor").load("./layout2/sensor.php");
         // setTimeout(loadSensor, 100);
     }
 
     function loadLocation() {
-        $("#location").load("./layout/location.php");
+        $("#location").load("./layout2/location.php");
     }
 
     function loadTable() {
-        $("#table").load("./layout/table.php");
+        $("#table").load("./layout2/table.php");
         setTimeout(loadTable, 15000);
     }
 
     function loadPagination() {
-        $("#pagination").load("./layout/pagination.php");
+        $("#pagination").load("./layout2/pagination.php");
     }
     </script>
 </body>
