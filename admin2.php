@@ -70,7 +70,7 @@ if(isset($_POST["submit"])) {
             <span style="color: white; background-color: #64a7ce; padding:8px 8px; border-radius:8px;"><?php echo $low_threshold; ?></span>
         </p>
     </div>
-    <a class="btn btn-danger mb-3" style="border: none;" href="./delete_auto.php" onclick="return confirm('Data di database akan terhapus semua, apakah yakin?')"><i class='bx bx-x-circle'></i><span class="ms-2">Clear Database</span></a>
+    <a class="btn btn-danger mb-3" style="border: none;" href="./delete_auto2.php" onclick="return confirm('Data di database akan terhapus semua, apakah yakin?')"><i class='bx bx-x-circle'></i><span class="ms-2">Clear Database</span></a>
     <a class="btn btn-primary" style="background-color: #272643; border: none;" href="logout2.php"><i class='bx bx-log-out'></i><span class="ms-2">Logout</span></a>
 </body>
 </html>
