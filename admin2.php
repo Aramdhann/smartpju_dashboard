@@ -11,7 +11,7 @@ if(isset($_POST["submit"])) {
     $up = $_POST["up_threshold"];
     $low = $_POST["low_threshold"];
 
-    $sql = "INSERT INTO threshold2 VALUES ('', '$up', '$low')";
+    $sql = "INSERT INTO threshold2 VALUES (null, '$up', '$low')";
     mysqli_query($connect, $sql);
 
     if(mysqli_affected_rows($connect) > 0) {
@@ -26,7 +26,7 @@ if(isset($_POST["submit"])) {
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>admin page</title>
     <link rel="icon" href="./assets/img/icon-pens.png">
